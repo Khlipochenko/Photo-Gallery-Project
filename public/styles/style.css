@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Courgette&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Satisfy&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   
+    --hintergrund: #0C2D48;
+    --farbe_header: #caf0f8;
+    --farbe_blue: #176B87;
+    --farbe_teal: #00afb9;
+
+    --farbe_hover: #c9184a;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(/public/images/5183000.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+/* ------Header styling --------*/
+header {
+
+    background-color: var(--hintergrund);
+    position: fixed;
+
+    width: 100%;
+    z-index: 4;
+}
+
+header i {
+
+    font-size: 1.5rem;
+    color: var(--farbe_header);
+
+
+}
+
+nav {
+    padding: 1rem;
+}
+
+
+
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+
+}
+
+.menu a {
+    float: none;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all 0.25s ease-in;
+}
+
+.menu a:hover {
+    background-color: var(--farbe_hover);
+}
+
+nav:hover .menu {
+    display: block;
+
+}
+
+nav:hover i {
+    color: var(--farbe_hover);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header p {
+    align-self: center;
+    padding-right: 1rem;
+    font-family: "Lobster";
+    color: var(--farbe_header);
+    font-size: 2rem;
+}
+
+header p:hover {
+    color: var(--farbe_hover);
+}
+
+/*------- Main styling--------- */
+
+/* -----------------Erse seie styling ----------------------*/
+.erte_seite {
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+
+
+}
+
+.erte_seite:after {
+    content: "";
+    background-image: url("/public/images/meer.jpg");
+    position: absolute;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    z-index: -1;
+
+    animation: erte_seite 10s ease-out both;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes erte_seite {
+    0% {
+        transform: scale(1) translate(0, 0);
+        transform-origin: 16% 84%;
+    }
+
+    50% {
+        transform: scale(1.25) translate(-20px, 15px);
+        transform-origin: left bottom;
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+        transform-origin: 16% 84%;
+}}
+
+
+.erte_seite img {
+    border-radius: 15px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+}
+
+.erte_seite h1 {
+    padding: 5rem 3rem 3rem 3rem;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    color: #800f2f;
+    font-weight: 900;
+
+}
+
+.focus-in-expand-fwd {
+    animation: focus-in-expand-fwd 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+       
+        transform: translateZ(-800px);
+       
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+       
+        transform: translateZ(0);
+      
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* -----------------Biografie styling ----------------------*/
+
+
+.biografie {
+
+    padding: 6rem 3rem 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 3rem;
+
+
+}
+
+.biografie img {
+
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+    width: 70%;
+}
+
+.biografie p {
+    text-indent: 2rem;
+    color: #403933;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.biografie h1,
+.biografie h2 {
+    text-align: center;
+    padding: 1rem;
+    color: #a4311c;
+
+}
+
+.biografie h1 {
+    margin-bottom: 2rem;
+}
+
+.biografie span {
+    color: #775130;
+    font-weight: bold;
+}
+
+.biografie a {
+    text-decoration: none;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--farbe_blue);
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.biografie a:hover {
+    color: var(--farbe_hover);
+}
+/*------------------------ Galerie styling ------------------------*/
+
+.container {
+    padding-top: 6rem;
+}
+
+.galerie {
+    box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px, rgba(60, 64, 67, 0.7) 0px 1px 3px 1px;
+    background-color: #ffffff;
+    padding: 1rem 0;
+
+
+
+}
+
+.text {
+    display: none;
+    color: var(--farbe_header);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(23, 107, 135, 0.5);
+    width: 100%;
+    text-align: center;
+
+
+
+
+
+}
+
+.bild {
+    position: relative;
+    width: 70%;
+    margin: 1rem auto;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    ;
+    transition: 1s easy;
+
+
+}
+.bild::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: '';
+    left: 0;
+    top: 0;
+}
+
+.bild:hover {
+    cursor: grab;
+
+    .text {
+        display: inline;
+        z-index: 2;
+
+    }
+
+ 
+
+}
+.bild:hover::after{
+    display: block;
+
+}
+.bild:active::after{
+    display: none;
+
+}
+
+.bild:active {
+    transform: scale(1.5);
+    z-index: 1;
+    transition: 1s;
+
+    img {
+        box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+
+
+    }
+}
+
+.bild img {
+
+    width: 100%;
+    
+}
+/* ---------------------------Kontakten styling ------------------*/
+
+.kontakt fieldset {
+    margin: 3rem auto;
+    width: 50%;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+
+}
+
+.kontakt h1 {
+    padding-bottom: 1rem;
+    text-align: center;
+    color: var(--hintergrund);
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+
+
+}
+
+input {
+    height: 1.8rem;
+}
+
+::placeholder {
+    float: left;
+    padding-left: 3px;
+}
+
+.kontakt button {
+    text-align: center;
+    background-color: var(--farbe_hover);
+    padding: 1rem;
+    font-size: 20px;
+    color: white;
+    float: right;
+    border: none;
+    border-radius: 5px;
+}
+
+.kontakt button:hover {
+    background-color: #f70a4d;
+}
+
+.kontakt button:active {
+    background-color: #800f2f;
+}
+/* -----------------------Footer styling --------------------------*/
+footer {
+    background-color: var(--hintergrund);
+    display: flex;
+color: var(--farbe_header);
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: space-between;
+
+}
+
+
+footer a {
+    text-decoration: none;
+    color: var(--farbe_header);
+    padding-left: 2rem;
+}
+
+footer a:hover {
+    color: var(--farbe_hover);
+}
+
+footer a i {
+    font-size: 1.5rem;
+}
+
+/* ----------------------Handy version -------------------------------*/
+@media(min-width:768px) {
+    #icon {
+        display: none;
+
+    }
+
+    header nav {
+        padding: 0 1rem;
+    }
+
+    header nav .menu {
+        display: flex;
+        position: static;
+        background-color: var(--hintergrund);
+
+        box-shadow: none;
+    }
+
+    header nav .menu a {
+        color: var(--farbe_header);
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    header nav .menu a :hover {
+        background-color: var(--farbe_hover);
+
+
+    }
+
+    nav:hover .menu {
+        display: flex;
+    }
+
+    .erte_seite {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .erte_seite h1 {
+        font-size: 8em;
+        min-width: 30%;
+
+    }
+
+    .erte_seite img {
+        max-width: 100%;
+    }
+
+
+    .galerie {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .biografie {
+        display: inline-block;
+        width: 70%;
+        margin: 3rem 15%;
+
+    }
+
+    .biografie img {
+        width: 30%;
+        float: left;
+        margin: 0 2rem 1rem 0;
+    }
+
+    .galerie {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(9, auto);
+        grid-template-columns: 25% auto auto auto auto auto auto;
+        grid-template-areas:
+            'bild1  bild3  bild3  bild8  bild8  bild6  bild6'
+            'bild1  bild3  bild3  bild8  bild8  bild6  bild6'
+            'bild1  bild5  bild5  bild5  bild5  bild12 bild12'
+            'bild2  bild5  bild5  bild5  bild5  bild12 bild12'
+            'bild2  bild7  bild7  bild4  bild4  bild9  bild9'
+            'bild10 bild10 bild10 bild11 bild11 bild11 bild11'
+            'bild10 bild10 bild10 bild11 bild11 bild11 bild11'
+            'bild15 bild15 bild14 bild14 bild13 bild13 bild13'
+            'bild15 bild15 bild14 bild14 bild13 bild13 bild13'    
+        ;
+
+    }
+
+    .bild:hover {
+
+        .text {
+
+            font-size: 1em;
+        }
+
+
+    }
+
+    .bild {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+
+    }
+
+    .bild1 {
+        grid-area: bild1;
+    }
+
+    .bild2 {
+        grid-area: bild2;
+    }
+
+    .bild3 {
+        grid-area: bild3;
+    }
+
+    .bild4 {
+        grid-area: bild4;
+    }
+
+    .bild5 {
+        grid-area: bild5;
+    }
+
+    .bild6 {
+        grid-area: bild6;
+    }
+
+    .bild7 {
+        grid-area: bild7;
+    }
+
+    .bild8 {
+        grid-area: bild8;
+    }
+
+    .bild9 {
+        grid-area: bild9;
+    }
+
+    .bild10 {
+        grid-area: bild10;
+    }
+
+    .bild11 {
+        grid-area: bild11;
+    }
+
+    .bild12 {
+        grid-area: bild12;
+    }
+    .bild13 {
+        grid-area: bild13;
+    }
+    .bild14 {
+        grid-area: bild14;
+    }
+    .bild15 {
+        grid-area: bild15;
+    }
+
+}
